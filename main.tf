@@ -29,20 +29,20 @@ variable "instance_name" {
 }
 
 # Create an AWS EC2 instance
-resource "aws_instance" "var.instance_name" {
+resource "aws_instance" "created_by_terra" {  # Resource name stays the same
   ami           = var.ami_id
   instance_type = var.instance_type
 
   tags = {
-    Name = var.instance_name
+    Name = var.instance_name  # This sets the actual name of the instance in AWS
   }
 }
 
 # Optionally, you can define outputs
 output "instance_id" {
-  value = aws_instance.Created_by_terra.id
+  value = aws_instance.created_by_terra.id
 }
 
 output "public_ip" {
-  value = aws_instance.Created_by_terra.public_ip
+  value = aws_instance.created_by_terra.public_ip
 }
