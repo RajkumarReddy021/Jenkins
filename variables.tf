@@ -1,17 +1,9 @@
-variable "key_name" {
-    description = "The name of the SSH key pair to access the instance"
-    type        = string
+variable "aws_access_key" {
+  description = "AWS Access Key"
+  type        = string
 }
 
-variable "access_key" {
-    description = "AWS Access Key"
-    type        = string
-    sensitive   = true
+variable "aws_secret_key" {
+  description = "AWS Secret Key"
+  type        = string
 }
-
-variable "secret_key" {
-    description = "AWS Secret Key"
-    type        = string
-    sensitive   = true
-}
-
