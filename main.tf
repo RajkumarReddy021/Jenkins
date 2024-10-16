@@ -25,11 +25,11 @@ variable "instance_type" {
 variable "instance_name" {
   description = "Instance name"
   type        = string
-  default     = "example-instance"  # Default instance name
+  default     = "Server_1"  # Default instance name
 }
 
 # Create an AWS EC2 instance
-resource "aws_instance" "Created_by_terra" {
+resource "aws_instance" "var.instance_name" {
   ami           = var.ami_id
   instance_type = var.instance_type
 
