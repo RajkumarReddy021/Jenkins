@@ -37,12 +37,6 @@ pipeline {
             }
         }
 
-        stage('Terraform Output') {
-            steps {
-                sh 'terraform output'  // Print outputs
-            }
-        }
-
         stage('Terraform Destroy') {
             steps {
                 input 'Are you sure you want to destroy the resources?'
