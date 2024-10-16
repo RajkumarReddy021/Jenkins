@@ -33,8 +33,8 @@ pipeline {
     }
 
     post {
-        always {
-            sh 'terraform output'  // Optional: Print outputs
+        success {
+            sh 'success'  // Optional: Print outputs
         }
     }
 }
